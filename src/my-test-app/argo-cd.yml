@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-test-app
+spec:
+  destination:
+    name: ''
+    namespace: wordpress
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: src/my-test-app
+    repoURL: 'https://github.com/rajdhavalikar1233/firstapp.git'
+    targetRevision: main
+    plugin:
+      name: argocd-vault-plugin
+  project: apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
