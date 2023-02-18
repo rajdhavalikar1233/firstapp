@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: wordpress
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: ''
+    namespace: wordpress
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: src/wordpress
+    repoURL: 'https://github.com/rajdhavalikar1233/firstapp'
+    targetRevision: HEAD
+    plugin:
+      name: argocd-vault-plugin-kustomize
+  project: apps
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - Replace=true
+      - PrunePropagationPolicy=background
