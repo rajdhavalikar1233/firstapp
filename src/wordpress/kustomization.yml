@@ -4,3 +4,4 @@ namespace: wordpress
 resources:
 - ./wordpress.yml
 - ./sql.yml
+- ./sql-secret.yml
