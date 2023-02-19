@@ -5,3 +5,4 @@ resources:
 - ./wordpress.yml
 - ./sql.yml
 - ./sql-secret.yml
+- ./hpa.yml
