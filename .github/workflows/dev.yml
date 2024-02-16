@@ -1,11 +1,9 @@
 name: PR Closed Workflow
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
-    types:
-      - closed
+      - develop
 
 jobs:
   echo-job:
