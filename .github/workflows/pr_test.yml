@@ -1,0 +1,15 @@
+name: PR Closed Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo github.ref
+        run: echo ${{ github.ref }}
