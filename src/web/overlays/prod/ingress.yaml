@@ -4,6 +4,7 @@
   metadata:
     name: ingress
   spec:
+    ingressClassName: nginx
     rules:
       - host: web.local
         http:
