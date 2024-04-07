@@ -4,7 +4,7 @@ namespace: web-prod
 namePrefix: web
 nameSuffix: -v1
 resources:
-  - ../bases
+  - ../../bases
   - secret.yaml
   - configmap.yaml
   - ingress.yaml
