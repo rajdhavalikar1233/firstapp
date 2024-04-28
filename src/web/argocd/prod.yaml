@@ -8,6 +8,8 @@ spec:
     repoURL: 'https://github.com/rajdhavalikar1233/firstapp.git'
     path: src/web/overlays/prod
     targetRevision: main
+    plugin:
+      name: argocd-vault-plugin-kustomize     
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: web
