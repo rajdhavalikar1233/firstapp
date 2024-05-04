@@ -3,17 +3,21 @@ kind: Application
 metadata:
   name: web-dev
 spec:
-  project: default
+  destination:
+    name: ''
+    namespace: web
+    server: 'https://kubernetes.default.svc'
   source:
-    repoURL: 'https://github.com/rajdhavalikar1233/firstapp.git'
     path: src/web/overlays/dev
+    repoURL: 'https://github.com/rajdhavalikar1233/firstapp.git'
     targetRevision: main
     plugin:
-      name: argocd-vault-plugin-kustomize    
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: web
+      name: argocd-vault-plugin-kustomize
+  sources: []
+  project: web
   syncPolicy:
-    automated: 
+    automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
