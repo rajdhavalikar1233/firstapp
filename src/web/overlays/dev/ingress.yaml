@@ -6,7 +6,7 @@
   spec:
     ingressClassName: nginx
     rules:
-      - host: web-dev.local
+      - host: web.dhavalikars.us
         http:
           paths:
             - path: /
