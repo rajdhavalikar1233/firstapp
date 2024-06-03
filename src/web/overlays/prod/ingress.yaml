@@ -3,8 +3,13 @@
   kind: Ingress
   metadata:
     name: ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
   spec:
-    ingressClassName: nginx
+    tls:
+    - hosts:
+        - web.dhavalikars.us
+      secretName: web-tls
     rules:
       - host: web.dhavalikars.us
         http:
