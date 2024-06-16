@@ -8,7 +8,7 @@
   spec:
     tls:
     - hosts:
-        - web-dev.dhavalikars.us
+        - web-dev.dhavalikars.work
       secretName: web-dev-tls
     ingressClassName: nginx
     rules:
