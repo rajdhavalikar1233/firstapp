@@ -8,10 +8,10 @@
   spec:
     tls:
     - hosts:
-        - web.dhavalikars.us
+        - web.dhavalikars.work
       secretName: web-tls
     rules:
-      - host: web.dhavalikars.us
+      - host: web.dhavalikars.work
         http:
           paths:
             - path: /
