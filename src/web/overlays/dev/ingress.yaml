@@ -12,7 +12,7 @@
       secretName: web-dev-tls
     ingressClassName: nginx
     rules:
-      - host: web-dev.dhavalikars.us
+      - host: web-dev.dhavalikars.work
         http:
           paths:
             - path: /
