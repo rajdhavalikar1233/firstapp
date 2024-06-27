@@ -1,0 +1,15 @@
+name: Deploy to Production
+
+on:
+  release:
+    types: [published]
+    branches: main
+    tags:
+      - "**"
+
+jobs:
+  echo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo github.ref
+        run: echo ${{ github.ref }}
