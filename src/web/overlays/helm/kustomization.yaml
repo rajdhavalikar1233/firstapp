@@ -7,5 +7,4 @@ helmCharts:
   version: 0.1033.33
   releaseName: confluent-operator
   namespace: confluent
-  valuesInline:
-    fullnameOverride: helloagain  
+  includeCRDs: true  
