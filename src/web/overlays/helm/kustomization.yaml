@@ -4,7 +4,7 @@ kind: Kustomization
 helmCharts:
 - name: confluent-for-kubernetes
   repo: https://packages.confluent.io/helm/confluentinc
-  version: "0.1033.33"
+  version: 0.1033.33
   releaseName: confluent-operator
   namespace: confluent
   valuesInline:
